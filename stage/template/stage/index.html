@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <p>connecté sous{{user.username}} |<a href="{% url 'connexion:logout' %}">Deconnexion</a> </p>
+    <h1>Liste des événements</h1>
+    <ul>
+        {% for E in Evenements %}
+        <li>
+            <a href="{% url 'stage:show' E.id_evenement %}">{{ E.titre }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

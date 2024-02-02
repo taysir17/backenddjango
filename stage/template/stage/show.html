@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{ Evenement.titre }}</h1>
+    <ul>
+        <li>date: {{ Evenement.date }}</li>
+        <li>lieu: {{ Evenement.lieu }}</li>
+        <li>heure debut: {{ Evenement.heure_debut }}</li>
+        <li><img src="{{ Evenement.photo }}" alt=""></li> <!-- Assuming Evenement.photo is the URL of the photo -->
+    </ul>
+    <p><a href="{% url 'stage:index' %}">&laquo; Revenir</a></p>
+</body>
+</html>

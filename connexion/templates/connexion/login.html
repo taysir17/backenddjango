@@ -1,0 +1,21 @@
+<h1>connexion</h1>
+{% for message in messages %}
+    <p>{{ message }}</p>
+{% endfor %}
+<form method="post">
+    {% csrf_token %}
+    <table>
+      <tr>
+          <td>{{ form.username.label_tag }}</td>
+          <td>{{ form.username }}</td>
+      </tr>
+      <tr>
+          <td>{{ form.password.label_tag }}</td>
+          <td>{{ form.password }}</td>
+      </tr>
+      </table>
+   <input type="submit" value="se connecter">
+
+   <a href="{% url 'connexion:register' %}">creer un compte</a>
+</form>
+
